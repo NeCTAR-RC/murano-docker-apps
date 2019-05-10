@@ -11,4 +11,4 @@
 #  License for the specific language governing permissions and limitations
 #  under the License.
 
-docker login -e unused@arg.com -u _json_key -p "$1" https://gcr.io
+docker login -u _json_key -p "$1" https://gcr.io
