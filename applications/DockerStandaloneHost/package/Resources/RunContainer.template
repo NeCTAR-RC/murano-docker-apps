@@ -25,11 +25,11 @@ Parameters:
 
 Body: |
   options = ['-d', '--name ' + args.appName]
-  for host_port, container_port in args.portMap.iteritems():
+  for host_port, container_port in args.portMap.items():
     options.append('-p {0}:{1}'.format(host_port, container_port))
-  for host_dir, container_dir in args.volumeMap.iteritems():
+  for host_dir, container_dir in args.volumeMap.items():
     options.append("-v '{0}':'{1}'".format(host_dir, container_dir))
-  for key, value in args.env.iteritems():
+  for key, value in args.env.items():
     options.append("-e '{0}'='{1}'".format(key, value))
   if args.privileged:
     options.append("--privileged")
